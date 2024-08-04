@@ -1,5 +1,16 @@
+# Uncomment below for GNU (Ubuntu)
+# Homebrew setup
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+
+
+
+# Uncomment below for GNU (Ubuntu)
 # Utilizing Antigen plugin manager for zsh
-source /opt/homebrew/share/antigen/antigen.zsh
+source /home/linuxbrew/.linuxbrew/share/antigen/antigen.zsh
+# Uncomment below for BSD (MacOS)
+# source /opt/homebrew/share/antigen/antigen.zsh
+
 
 
 
@@ -85,3 +96,15 @@ antigen apply
 # Set up fzf key bindings and fuzzy completion
 # Set after antigen apply, as the CTRL-r keybind gets overwritten
 source <(fzf --zsh)
+
+
+
+
+
+# Uncomment below on BSD (MacOS)
+# export LSCOLORS="Gxfxcxdxbxegedabagacad"
+
+# Uncomment below on GNU (Ubuntu)
+# Have to use this on GNU based ls, ohmyzsh checks if $LSCOLORS value is empty first (line 29 of theme-and-appearnce.sh in .ohmyzsh/lib/). If it has a value, which it does on here as this is Ubuntu wsl distribution that comes with $LSCOLORS defined, so never goes in that if loop in the file mentioned to set the default ohmyzsh one (bold cyan directories, etc)
+# TLDR need this to color ls here(GNU) but not on mac(BSD)
+export LS_COLORS="di=1;36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
