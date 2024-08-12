@@ -17,15 +17,13 @@ export PAGER='less -i'
 
 
 # Adding my custom scripts to PATH
-export PATH=$PATH:/Users/sunil/.local/bin
+export PATH=$PATH:$HOME/.local/bin
 
 
 
 
 # Adding variables for cd-history
-# source cdh_env
-
-
+source cdh_env
 
 
 
