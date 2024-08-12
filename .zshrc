@@ -42,6 +42,12 @@ antigen bundle git
 
 
 
+
+# Bash like command-not-found package suggestions
+antigen bundle command-not-found
+
+
+
 # Fish like experience bundles
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
